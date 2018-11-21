@@ -1,0 +1,95 @@
+apply plugin: 'kotlin-multiplatform'
+
+apply plugin: 'kotlinx-serialization'
+
+
+def coroutines_version = "+"
+def serialization_version = "+"
+def ktor_version = "+"
+
+kotlin {
+    targets {
+        final def iOSTarget = System.getenv('SDK_NAME')?.startsWith("iphoneos")    \
+                                 ? presets.iosArm64 : presets.iosX64
+
+        fromPreset(iOSTarget, 'iOS') {
+            compilations.main.outputKinds('FRAMEWORK')
+        }
+
+        fromPreset(presets.jvm, 'android')
+    }
+
+    sourceSets {
+        commonMain.dependencies {
+            api 'org.jetbrains.kotlin:kotlin-stdlib-common'
+
+            implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-common:$coroutines_version"
+            implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:$serialization_version"
+
+            implementation "io.ktor:ktor-client-core:$ktor_version"
+            implementation "io.ktor:ktor-client-json:$ktor_version"
+
+            // https://mvnrepository.com/artifact/org.kodein.di/kodein-di-erased-common
+            implementation group: 'org.kodein.di', name: 'kodein-di-erased-common', version: '5.3.0'
+
+            // https://mvnrepository.com/artifact/org.kodein.di/kodein-di-core-common
+            implementation group: 'org.kodein.di', name: 'kodein-di-core-common', version: '5.3.0'
+
+        }
+
+        androidMain.dependencies {
+            api 'org.jetbrains.kotlin:kotlin-stdlib'
+
+            implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+
+            implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:$serialization_version"
+
+            implementation "io.ktor:ktor-client-core-jvm:$ktor_version"
+            implementation "io.ktor:ktor-client-json-jvm:$ktor_version"
+
+            // https://mvnrepository.com/artifact/org.kodein.di/kodein-di-core-jvm
+            implementation group: 'org.kodein.di', name: 'kodein-di-core-jvm', version: '5.3.0'
+
+        }
+
+        iosMain.dependencies {
+            implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:$coroutines_version"
+            implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:$serialization_version"
+
+            implementation "io.ktor:ktor-client-ios:$ktor_version"
+            implementation "io.ktor:ktor-client-core-ios:$ktor_version"
+            implementation "io.ktor:ktor-client-json-ios:$ktor_version"
+
+            // https://mvnrepository.com/artifact/org.kodein.di/kodein-di-core-native
+            implementation group: 'org.kodein.di', name: 'kodein-di-core-native', version: '5.3.0', ext: 'pom'
+
+
+
+        }
+    }
+}
+
+// workaround for https://youtrack.jetbrains.com/issue/KT-27170
+configurations {
+    compileClasspath
+}
+
+task packForXCode(type: Sync) {
+    final File frameworkDir = new File(buildDir, "xcode-frameworks")
+    final String mode = project.findProperty("XCODE_CONFIGURATION")?.toUpperCase() ?: 'DEBUG'
+
+    inputs.property "mode", mode
+    dependsOn kotlin.targets.iOS.compilations.main.linkTaskName("FRAMEWORK", mode)
+
+    from { kotlin.targets.iOS.compilations.main.getBinary("FRAMEWORK", mode).parentFile }
+    into frameworkDir
+
+    doLast {
+        new File(frameworkDir, 'gradlew').with {
+            text = "#!/bin/bash\nexport 'JAVA_HOME=${System.getProperty("java.home")}'\ncd '${rootProject.rootDir}'\n./gradlew \$@\n"
+            setExecutable(true)
+        }
+    }
+}
+
+tasks.build.dependsOn packForXCode

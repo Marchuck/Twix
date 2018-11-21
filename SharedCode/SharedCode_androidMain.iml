@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":SharedCode:androidMain" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$/.." external.system.id="GRADLE" external.system.module.group="Twix" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="3" platform="JVM 1.6" useProjectSettings="false" isTestModule="false" externalProjectId=":SharedCode">
+        <sourceSets>
+          <sourceSet>SharedCode_commonMain</sourceSet>
+        </sourceSets>
+        <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
+        <compilerSettings />
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/build/classes/kotlin/android/main" />
+          <option name="classpath" value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-json-jvm/1.0.0/3cf5525bff103df98d906367591b1e279343b9bb/ktor-client-json-jvm-1.0.0.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-core-jvm/1.0.0/b833d49a03291a82f06dd217bfbefb2d0ac7c9c1/ktor-client-core-jvm-1.0.0.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-http-cio/1.0.0/dca88fb648ac6d0330892558d04900eb62dadc4e/ktor-http-cio-1.0.0.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-http-jvm/1.0.0/a4df883937c7c6559169b32368bcc5be4885c8b5/ktor-http-jvm-1.0.0.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-network/1.0.0/9f6197415dac972068e60cb90ee07d57ba15ad48/ktor-network-1.0.0.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-utils-jvm/1.0.0/4e69357f3e911f65dffac7dbcbe8f63d352198f8/ktor-utils-jvm-1.0.0.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-jdk8/1.0.1/ee52dcd51dbdd3f94271cab32c76ce820adfe024/kotlinx-coroutines-jdk8-1.0.1.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-io-jvm/0.1.0/18509005a7491e0be95ef1cf61aaa4a845cd1c2c/kotlinx-coroutines-io-jvm-0.1.0.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core/1.0.1/f33e8dab753f33d1bbb07cca664fd6f13d993d7e/kotlinx-coroutines-core-1.0.1.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-runtime/0.9.1/9cdf37d7600e0b92854359b44a78e80dd713062f/kotlinx-serialization-runtime-0.9.1.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.3.10/dd02865be0351707554b16a896b766b2396cdafa/kotlin-reflect-1.3.10.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.kodein.di/kodein-di-core-jvm/5.3.0/369955e39d64a55d7f01a4adf691c509bfad5b4d/kodein-di-core-jvm-5.3.0.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.3.10/71d0fa967493eb76648b575edf1762cb2d0c7f10/kotlin-stdlib-jdk8-1.3.10.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.10/4d147bf43060dc43d61b096e24da1e67dfe0c032/kotlin-stdlib-jdk7-1.3.10.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-io-jvm/0.1.0/15732bac54bc785099cb93da9da398ffd5724f2d/kotlinx-io-jvm-0.1.0.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.10/b178c1501609c6e4ee8be635513cb023a466457d/kotlin-stdlib-1.3.10.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-json/1.0.0/2f947198c8a556c5a1796f401812042476616c00/ktor-client-json-1.0.0.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-client-core/1.0.0/8531962e77f821dabeb69b302c2abf01c7bb871b/ktor-client-core-1.0.0.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-http/1.0.0/5a08fa436981baf0cffd5cc92a4877af888c702d/ktor-http-1.0.0.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/io.ktor/ktor-utils/1.0.0/6f3072bc2cc61423352a927538941fc8b4dd6742/ktor-utils-1.0.0.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-io/0.1.0/127c5a9d05c82b6d46c9c1c6f1625aede4590546/kotlinx-coroutines-io-0.1.0.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-common/1.0.1/679991d1b388fd9392eeb3d63b10b3f4c284f389/kotlinx-coroutines-core-common-1.0.1.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-serialization-runtime-common/0.9.1/172056fcfdc48ec0bd0b0edf807cbbf0d76b1d49/kotlinx-serialization-runtime-common-0.9.1.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.kodein.di/kodein-di-erased-common/5.3.0/ffccf710bea3bb7b185dc7e470a7dbef0348fb37/kodein-di-erased-common-5.3.0.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.kodein.di/kodein-di-core-common/5.3.0/56e896f60cc6181994251a8385be459f76b869f3/kodein-di-core-common-5.3.0.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-io/0.1.0/aac190a12dbe2b6f1f207e3d35ee27b17fb168f7/kotlinx-io-0.1.0.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/atomicfu-common/0.11.12/eb1de5f3b800992b2b72655ef8c595b4f11ee444/atomicfu-common-0.11.12.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.10/1b19d99229dcedad7caf50534dce38fe82845269/kotlin-stdlib-common-1.3.10.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.25/da76ca59f6a57ee3102f8f9bd9cee742973efa8a/slf4j-api-1.7.25.jar:/Users/lukasz.marczak/.gradle/caches/modules-2/files-2.1/com.typesafe/config/1.3.1/2cf7a6cc79732e3bdf1647d7404279900ca63eb0/config-1.3.1.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
+          <option name="moduleName" value="SharedCode" />
+          <option name="addCompilerBuiltIns" value="true" />
+          <option name="loadBuiltInsFromDependencies" value="true" />
+          <option name="languageVersion" value="1.3" />
+          <option name="apiVersion" value="1.3" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array>
+              <option value="$APPLICATION_PLUGINS_DIR$/Kotlin/lib/kotlinx-serialization-ide-plugin.jar" />
+            </array>
+          </option>
+          <option name="multiPlatform" value="true" />
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/src/androidMain/kotlin">
+      <sourceFolder url="file://$MODULE_DIR$/src/androidMain/kotlin" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/src/androidMain/resources" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="SharedCode_commonMain" />
+    <orderEntry type="library" name="Gradle: org.kodein.di:kodein-di-core-common:5.3.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.kodein.di:kodein-di-erased-common:5.3.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.kodein.di:kodein-di-core-jvm:5.3.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.3.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core:1.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.9.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-client-core-jvm:1.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-client-json-jvm:1.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-serialization-runtime-common:0.9.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-client-core:1.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-client-json:1.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.3.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-io-jvm:0.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-io-jvm:0.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.25" level="project" />
+    <orderEntry type="library" name="Gradle: com.typesafe:config:1.3.1" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-http-cio:1.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-http-jvm:1.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-utils-jvm:1.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-io:0.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:kotlinx-coroutines-io:0.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlinx:atomicfu-common:0.11.12" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-http:1.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-utils:1.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: io.ktor:ktor-network:1.0.0" level="project" />
+  </component>
+</module>
